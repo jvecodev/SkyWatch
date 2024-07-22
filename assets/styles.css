@@ -1,31 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+:root {
+    --font-pop: 'Poppins';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-pop);
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-:root{
-    --font-main: 'Lato', sans-serif;
+/* Icones */
+/* styles.css */
+
+body {
+    background-color: rgb(22, 22, 22);
+    color: white;
+    background: url(./imagens/3.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/* all icons */
+.content{
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
 
-
-body{
-    background-color: rgb(27, 27, 27);
-    color: white;   
-    font-family: var(--font-main); 
 }
 /* Scrollbar */
 body::-webkit-scrollbar {
     width: 15px;
 }
-    
+
 body::-webkit-scrollbar-track {
     background-color: rgb(27, 27, 27);
-
 }
 
 body::-webkit-scrollbar-thumb {
@@ -35,45 +48,37 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 196, 0);
-    
-
+    background: green;
 }
-.navBar{
+
+.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     color: white;
-    position: fixed;
     width: 100%;
-    height: 100px;
-    background-color: rgb(27, 27, 27);
-
+    background-color: rgba(46, 45, 45, 0.288);
 }
 
-
-.navBar h1{
+.navBar h1 {
     font-size: 2rem;
     transition: all 0.3s ease;
-
 }
 
-.navBar h1:hover{
-     scale: 1.1;
+.navBar h1:hover {
+    scale: 1.1;
 }
 
-.inputSearch{
-    padding: 10px;
+.inputSearch {
     border: none;
+    padding: 5px;
     border-radius: 15px;
     width: 250px;
     background-color: rgb(46, 45, 45);
-
-    
 }
 
-.inputSearch input{
+.inputSearch input {
     background-color: rgb(46, 45, 45);
     color: white;
     border: none;
@@ -81,279 +86,700 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 5px;
 }
 
-.inputSearch input::placeholder{
+.inputSearch input::placeholder {
     color: white;
     font-size: 1rem;
+    font-weight: lighter;
 }
 
-.inputSearch button{
+.inputSearch button {
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1.2rem;
     background-color: rgb(46, 45, 45);
-
 }
 
-
-.currentLoc button{
-    
+.currentLoc button {
     background-color: rgb(190, 96, 252);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
     padding: 10px;
-    border-radius: 15px ;
+    border-radius: 15px;
     transition: all 0.3s ease;
-    
 }
 
-.currentLoc button:hover{
-    background-color: rgb(255, 196, 0);
+.currentLoc button:hover {
+    background-color: green;
 }
 
-.content{
+.content {
     display: flex;
     border-radius: 15px;
     color: white;
     font-weight: lighter;
 }
 
-
-.leftSide{
+.leftSide {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    margin-top: 138px;
     margin-left: 50px;
 }
 
-.leftSide > .mainWeather{
+.leftSide > .mainWeather {
     display: flex;
-    padding: 2rem;
-    background-color: rgb(46, 45, 45);
+    padding: 1rem;
+    background-color: rgba(46, 45, 45, 0.849);
     border-radius: 15px;
-    flex-direction: column;
-
-    
 }
 
-.leftSide > .mainWeather > h1{
+
+.leftSide > .mainWeather > h1 {
     font-size: 3.5rem;
     font-weight: lighter;
-    margin: 20px 70px 0px 0px ;
+    margin: 20px 70px 0px 0px;
 }
 
-.leftSide > .mainWeather > h4{
-    margin: 1rem 0;
+.leftSide > .mainWeather > h4 {
+    margin: 1rem ;
+    font-weight: lighter;
+    font-size: 1.2rem;
 }
 
-.mainWeather > hr{
+.mainWeather > hr {
     border: 1px solid white;
     margin: 1rem 0;
 }
 
-.leftSide > .nextDays{
-    
+.leftSide > .nextDays {
     padding: 2rem;
 }
 
-.leftSide > .nextDaysWeather{
+.leftSide > .nextDays:hover{
+    background-color: green;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+
+}
+
+.leftSide > .nextDaysWeather {
     display: flex;
     padding: 1rem;
-    background-color: rgb(46, 45, 45);
     border-radius: 15px;
     flex-direction: column;
-    
+    background-color: rgba(46, 45, 45, 0.849);
+    font-size: 20px;
+
 }
 
-.nextDaysWeather > .day > h1{
-    font-size: 22px;
-    margin: 8px 20px 0px 10px ;
-    font-weight:normal;
-    
-}
-   
-.nextDaysWeather > .day> h3{
-    font-size: 15px;
-    margin: 10px 20px 0px 10px ;
-    font-weight: normal;
+.nextDaysWeather > .day > h1 {
+    margin: 8px 20px 0px 10px;
+    font-weight: lighter;
 }
 
-.day{
+
+
+.day {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: rgb(46, 45, 45);
     border-radius: 15px;
-    
 }
 
-.main{
-
+.main {
     flex-direction: column;
     border-radius: 15px;
 }
 
-.rightSide{
+.rightSide {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
-}
-
-.rightSide > .weatherDetails{
-    display: flex;
-    padding: 2rem;
+    background-color: rgba(46, 45, 45, 0.849);
     border-radius: 15px;
-    flex-direction: column;
-    
-}
-
-.first{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(46, 45, 45);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-.second{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(46, 45, 45);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-
-.details{
-    display: flex;
-    padding: 2rem;
-    background-color: rgba(15, 15, 15, 0.363);
-    border-radius: 15px;
-    margin: 10px;
-    flex-direction: column;
-    width: 300px;
 
 }
 
-.details > h3{
+.rightSide > .weather-details > .second h1 {
     font-size: 1.5rem;
     font-weight: lighter;
-}
-
-.details > h2{
-    font-size: 1.2rem;
-    font-weight: lighter;
-}
-
-.details > i {
-    font-size: 3.5rem;
-
-}
-
-.details > h2>  i {
-    font-size: 3.5rem;
-
-}
-
-.TodayAt{
-    display: flex;
+    background-color: rgb(22, 22, 22);
     border-radius: 15px;
-    flex-direction: column;
-    margin-left: 50px;
-}
-
-.TodayAt > .hourly {
+    padding: 2rem;
     display: flex;
-    border-radius: 15px;
-    margin-top: 20px;
-    flex-direction: row;
-}
-
-.TodayAt > .hourly > .firstHourly{
-    flex-direction: row;
-    display: flex;
-}
-.TodayAt > .hourly > .firstHourly > div{
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: rgb(46, 45, 45);
+}
+
+.rightSide > .weather-details > .first h1 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background-color: rgb(22, 22, 22);
     border-radius: 15px;
-}
-.TodayAt > .hourly > .firstHourly > div > h3{
-    font-size: 1.2rem;
-    font-weight: lighter;
-    margin: 40px 10px 20px 10px ;
-}
-
-.TodayAt > .hourly > .firstHourly > div > h2{
-    font-size: 1.2rem;
-    font-weight: lighter;
-
-}
-
-.TodayAt > .hourly > .secondHourly{
-    flex-direction: row;
+    padding: 2rem 3rem;
     display: flex;
-}
-.TodayAt > .hourly > .secondHourly > div{
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: rgb(46, 45, 45);
-    border-radius: 15px;
 }
-
-.TodayAt > .hourly > .secondHourly > div > h3{
-    font-size: 1.2rem;
-    font-weight: lighter;
-    margin: 40px 20px 20px 10px ;
-}
-.TodayAt > .hourly > .secondHourly > div > h2{
-    font-size: 1.2rem;
-    font-weight: lighter;
-
-}
-.sun{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgb(255, 196, 0);
-}
-
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     color: white;
-    font-weight: lighter;
+    font-weight: bolder;
     margin-top: 20px;
     color: rgb(190, 96, 252);
-
 }
 
-footer > p > a{
+footer > p > a {
     text-decoration: none;
-    font-weight: lighter;
+    font-weight: bolder;
     transition: all 0.3s ease;
     color: rgb(190, 96, 252);
-
-    
-    
-    
 }
 
-footer > p > a:hover{
-    color: yellow;
+footer > p > a:hover {
+    color: green
+}
+
+img:hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+}
+/* Media Queries */
+
+@media (max-width: 1400px) {
+   
+
+
+    .content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+
+
+    .leftSide > .mainWeather {
+        display: flex;
+        border-radius: 15px;
+        height: 150px;
+
+        
+    }
+    .leftSide > .mainWeather >.Temperature {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        height: 30px;
+        padding: 20px;
+        flex-direction: column;
+        display: flex;
+    }
+    .Temperature > img{
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+    }
+
+   
+
+    .leftSide > .mainWeather > h4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+     
+    .leftSide> .mainWeather > hr{
+        margin-right: 50px;
+    }
+   
+
+    .leftSide > .nextDaysWeather {
+        display: flex;
+        border-radius: 15px;
+        background-color: rgba(46, 45, 45, 0.849);
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        
+    }
+
+  
+
+   .rightSide{
+         display: flex;
+         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+
+    
+   }
+    
+     
+    
+       
+    
+        .details > h2 {
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+    
+        .details > i {
+            font-size: 3.5rem;
+        }
+    
+        .details > h2 > i {
+            font-size: 3.5rem;
+        }
+    
+        
+    }
+@media (max-width: 1200px) {
+
+   
+
+
+    .content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .leftSide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+    }
+
+    .leftSide > .mainWeather {
+        display: flex;
+        
+        border-radius: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+   
+   
+        
+
+    .leftSide > .mainWeather > h4 {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+   
+
+    .leftSide > .nextDaysWeather {
+        display: flex;
+        border-radius: 15px;
+        background-color: rgba(46, 45, 45, 0.849);
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        
+    }
+
+  
+    .rightSide{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 15px;
+        margin: 20px;
+        background-color: transparent;
+       }
+       .rightSide h1{
+           font-size: 1.5rem;
+           font-weight: lighter;
+           margin: 10px;
+           border-radius: 15px;
+           display: flex;
+           justify-content: center;
+           align-items: center;}
+    
+        }
+    
+        .rightSide > .weather-details > .first h1 {
+            border: solid 1px white;
+        }
+        .rightSide > .weather-details > .second h1 {
+            border: solid 1px white;
+        }
+    
+        
+
+
+@media (max-width: 992px) {
+    
+}
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0px 50px;
+    
+    
+   }
+
+.leftSide > .mainWeather {
+    display: flex;
+    background-color: rgba(46, 45, 45, 0);
+    border-radius: 15px;
+    flex-direction: row;
+}
+   .leftSide> .nextDays{
+    border: solid 1px white;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 30px;
 
 }
+
+.leftSide > .nextDaysWeather {
+    margin-top: 20px;
+}
+.rightSide{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: transparent;
+   }
+   .rightSide h1{
+       font-size: 1.5rem;
+       font-weight: lighter;
+       margin: 10px;
+       border-radius: 15px;
+       display: flex;
+       justify-content: center;
+       align-items: center;}
+
+    
+
+    .rightSide > .weather-details > .first h1 {
+        border: solid 1px white;
+    }
+    .rightSide > .weather-details > .second h1 {
+        border: solid 1px white;
+    }
+
+
+
+@media (max-width: 768px) {
+    .navBar{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+    
+    .navBar > .currentLoc > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .leftSide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 0px 50px;
+        
+        
+       }
+
+    .leftSide > .mainWeather {
+        display: flex;
+        background-color: rgba(46, 45, 45, 0);
+        border-radius: 15px;
+        flex-direction: row;
+    }
+       .leftSide> .nextDays{
+        border: solid 1px white;
+        border-radius: 15px;
+        padding: 1rem;
+        margin-top: 30px;
+
+    }
+
+    .leftSide > .nextDaysWeather {
+        margin-top: 20px;
+    }
+
+  
+   
+
+   .rightSide{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: transparent;
+   }
+   .rightSide h1{
+       font-size: 1.5rem;
+       font-weight: lighter;
+       margin: 10px;
+       border-radius: 15px;
+       display: flex;
+       justify-content: center;
+       align-items: center;}
+
+    }
+
+    .rightSide > .weather-details > .first h1 {
+        border: solid 1px white;
+    }
+    .rightSide > .weather-details > .second h1 {
+        border: solid 1px white;
+    }
+
+   
+
+
+@media (max-width: 576px) {
+    
+
+    .navBar{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+    .navBar h1 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .navBar > .inputSearch {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+    }
+
+    .navBar > .currentLoc > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+
+    .content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .leftSide > .mainWeather {
+        display: flex;
+        background-color: rgba(46, 45, 45, 0);
+        border-radius: 15px;
+        flex-direction: column;
+        height: 300px;
+
+        
+    }
+
+    .leftSide > .mainWeather >.Temperature {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        height: 100px;
+        padding: 20px;
+        flex-direction: row;
+        display: flex;
+    }
+    
+    .leftSide> .nextDays{
+        border: solid 1px white;
+        border-radius: 15px;
+        padding: 1rem;
+        margin-top: 60px;
+
+    }
+
+    .leftSide > .nextDaysWeather {
+        margin-top: 20px;
+    }
+   
+
+   .rightSide{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+    margin: 20px;
+   }
+   .rightSide h1{
+       font-size: 1.5rem;
+       font-weight: lighter;
+       border-radius: 15px;
+       padding: 2rem;
+       
+
+    }
+
+    .rightSide > .weather-details > .first h1 {
+        border: solid 1px white;
+    }
+    .rightSide > .weather-details > .second h1 {
+        border: solid 1px white;
+    }
+
+    
+
+
+      
+
+
+
+
+@media (max-width: 320px) {
+    ::-webkit-scrollbar {
+        display: none   ;
+    }
+
+    .navBar{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+    .navBar h1 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .navBar > .inputSearch {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+    }
+
+    .navBar > .currentLoc > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+
+    .content {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .leftSide > .mainWeather {
+        display: flex;
+        background-color: rgba(46, 45, 45, 0);
+        border-radius: 15px;
+        flex-direction: column;
+        height: 300px;
+
+        
+    }
+
+    .leftSide > .mainWeather >.Temperature {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        height: 50px;
+        padding: 20px;
+        flex-direction: row;
+        display: flex;
+    }
+  
+   .leftSide> .nextDays{
+    border: solid 1px white;
+    border-radius: 15px;
+    padding: 1rem;
+
+}
+
+   .rightSide{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(46, 45, 45, 0);
+    border-radius: 15px;
+    margin: 20px;
+   }
+   .rightSide h1{
+       font-size: 1.5rem;
+       font-weight: lighter;
+       margin: 10px;
+       border-radius: 15px;
+       padding: 2rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;}
+
+    }
+
+    .rightSide > .weather-details > .first h1 {
+        border: solid 1px white;
+    }
+    .rightSide > .weather-details > .second h1 {
+        border: solid 1px white;
+    }
+
+   
+
+}
+
+
