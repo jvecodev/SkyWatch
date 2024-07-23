@@ -14,14 +14,14 @@
 /* styles.css */
 
 body {
-    background-color: rgb(22, 22, 22);
-    color: white;
-    background: url(./imagens/3.jpg) no-repeat center center/cover;
+    /* background-color: rgb(255, 255, 255); */
+    background: url(/assets/imagens/fundo.jpg) no-repeat center center/cover;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 
 .content{
 
@@ -30,16 +30,15 @@ body {
     align-items: center;
     flex-direction: row;
     margin-top: 20px;
+    margin-top: 100px;
 
 }
 /* Scrollbar */
 body::-webkit-scrollbar {
     width: 15px;
+    background: #9EC7CD;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: rgb(27, 27, 27);
-}
 
 body::-webkit-scrollbar-thumb {
     background: rgb(190, 96, 252);
@@ -48,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: green;
+    background: rgb(40, 41, 40);
 }
 
 .navBar {
@@ -56,9 +55,10 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 100%;
-    background-color: rgba(46, 45, 45, 0.288);
+    background-color: rgba(133, 87, 87, 0.068);
+    
 }
 
 .navBar h1 {
@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .currentLoc button:hover {
-    background-color: green;
+    background-color: rgb(130, 131, 130);
 }
 
 .content {
@@ -136,6 +136,12 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 1rem;
     background-color: rgba(46, 45, 45, 0.849);
     border-radius: 15px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.leftSide > .mainWeather:hover {
+    scale: 1.02;
 }
 
 
@@ -152,19 +158,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .mainWeather > hr {
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     margin: 1rem 0;
 }
 
 .leftSide > .nextDays {
-    padding: 2rem;
+    color: black;
+    transition: all 0.3s ease;
 }
 
 .leftSide > .nextDays:hover{
-    background-color: green;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-
+    scale: 1.1;
+    
 }
 
 .leftSide > .nextDaysWeather {
@@ -174,7 +179,12 @@ body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     background-color: rgba(46, 45, 45, 0.849);
     font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
 
+}
+.leftSide > .nextDaysWeather:hover{
+    scale: 1.02;
 }
 
 .nextDaysWeather > .day > h1 {
@@ -205,6 +215,16 @@ body::-webkit-scrollbar-thumb:hover {
 
 }
 
+.rightSide > .weather-details > .second h1:hover{   
+    scale: 1.05;
+}
+
+
+.rightSide > .weather-details > .first h1:hover{   
+    scale: 1.05;
+}
+   
+
 
 .rightSide > .weather-details > .second h1 {
     font-size: 1.5rem;
@@ -215,6 +235,9 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 .rightSide > .weather-details > .first h1 {
@@ -226,6 +249,9 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+
 }
 footer {
     display: flex;
@@ -416,12 +442,6 @@ img:hover {
     
         }
     
-        .rightSide > .weather-details > .first h1 {
-            border: solid 1px white;
-        }
-        .rightSide > .weather-details > .second h1 {
-            border: solid 1px white;
-        }
     
         
 
@@ -447,7 +467,6 @@ img:hover {
     flex-direction: row;
 }
    .leftSide> .nextDays{
-    border: solid 1px white;
     border-radius: 15px;
     padding: 1rem;
     margin-top: 30px;
@@ -478,13 +497,7 @@ img:hover {
 
     
 
-    .rightSide > .weather-details > .first h1 {
-        border: solid 1px white;
-    }
-    .rightSide > .weather-details > .second h1 {
-        border: solid 1px white;
-    }
-
+    
 
 
 @media (max-width: 768px) {
@@ -527,7 +540,6 @@ img:hover {
         flex-direction: row;
     }
        .leftSide> .nextDays{
-        border: solid 1px white;
         border-radius: 15px;
         padding: 1rem;
         margin-top: 30px;
@@ -562,12 +574,7 @@ img:hover {
 
     }
 
-    .rightSide > .weather-details > .first h1 {
-        border: solid 1px white;
-    }
-    .rightSide > .weather-details > .second h1 {
-        border: solid 1px white;
-    }
+   
 
    
 
@@ -635,7 +642,6 @@ img:hover {
     }
     
     .leftSide> .nextDays{
-        border: solid 1px white;
         border-radius: 15px;
         padding: 1rem;
         margin-top: 60px;
@@ -665,14 +671,6 @@ img:hover {
 
     }
 
-    .rightSide > .weather-details > .first h1 {
-        border: solid 1px white;
-    }
-    .rightSide > .weather-details > .second h1 {
-        border: solid 1px white;
-    }
-
-    
 
 
       
@@ -773,13 +771,7 @@ img:hover {
 
     }
 
-    .rightSide > .weather-details > .first h1 {
-        border: solid 1px white;
-    }
-    .rightSide > .weather-details > .second h1 {
-        border: solid 1px white;
-    }
-
+ 
    
 
 }
