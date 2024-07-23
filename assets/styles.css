@@ -231,7 +231,7 @@ body::-webkit-scrollbar-thumb:hover {
 .rightSide > .weather-details > .second h1 {
     font-size: 1.5rem;
     font-weight: normal;
-    background-color: rgb(22, 22, 22);
+    background-color: rgba(46, 45, 45, 0.849);
     border-radius: 15px;
     padding: 2rem;
     display: flex;
@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb:hover {
 .rightSide > .weather-details > .first h1 {
     font-size: 1.5rem;
     font-weight: normal;
-    background-color: rgb(22, 22, 22);
+    background-color: rgba(46, 45, 45, 0.849);
     border-radius: 15px;
     padding: 2rem 3rem;
     display: flex;
