@@ -39,12 +39,14 @@ body::-webkit-scrollbar {
     background: #9EC7CD;
 }
 
+/* Scrollbar */
 
 body::-webkit-scrollbar-thumb {
     background: rgb(190, 96, 252);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
+/* Scrollbar */
 
 body::-webkit-scrollbar-thumb:hover {
     background: rgb(40, 41, 40);
