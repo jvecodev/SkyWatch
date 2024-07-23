@@ -89,7 +89,7 @@ body::-webkit-scrollbar-thumb:hover {
 .inputSearch input::placeholder {
     color: white;
     font-size: 1rem;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .inputSearch button {
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     border-radius: 15px;
     color: white;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .leftSide {
@@ -141,13 +141,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .leftSide > .mainWeather > h1 {
     font-size: 3.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     margin: 20px 70px 0px 0px;
 }
 
 .leftSide > .mainWeather > h4 {
     margin: 1rem ;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 1.2rem;
 }
 
@@ -205,9 +205,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 }
 
+
 .rightSide > .weather-details > .second h1 {
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     background-color: rgb(22, 22, 22);
     border-radius: 15px;
     padding: 2rem;
@@ -218,7 +219,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .rightSide > .weather-details > .first h1 {
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     background-color: rgb(22, 22, 22);
     border-radius: 15px;
     padding: 2rem 3rem;
@@ -235,6 +236,7 @@ footer {
     font-weight: bolder;
     margin-top: 20px;
     color: rgb(190, 96, 252);
+    font-size: 20px;
 }
 
 footer > p > a {
@@ -276,7 +278,7 @@ img:hover {
     }
     .leftSide > .mainWeather >.Temperature {
         font-size: 1.5rem;
-        font-weight: lighter;
+        font-weight: normal;
         height: 30px;
         padding: 20px;
         flex-direction: column;
@@ -329,7 +331,7 @@ img:hover {
     
         .details > h2 {
             font-size: 1.2rem;
-            font-weight: lighter;
+            font-weight: normal;
         }
     
         .details > i {
@@ -405,7 +407,7 @@ img:hover {
        }
        .rightSide h1{
            font-size: 1.5rem;
-           font-weight: lighter;
+           font-weight: normal;
            margin: 10px;
            border-radius: 15px;
            display: flex;
@@ -551,7 +553,7 @@ img:hover {
    }
    .rightSide h1{
        font-size: 1.5rem;
-       font-weight: lighter;
+       font-weight: normal;
        margin: 10px;
        border-radius: 15px;
        display: flex;
@@ -625,7 +627,7 @@ img:hover {
 
     .leftSide > .mainWeather >.Temperature {
         font-size: 1.5rem;
-        font-weight: lighter;
+        font-weight: normal;
         height: 100px;
         padding: 20px;
         flex-direction: row;
@@ -656,7 +658,7 @@ img:hover {
    }
    .rightSide h1{
        font-size: 1.5rem;
-       font-weight: lighter;
+       font-weight: normal;
        border-radius: 15px;
        padding: 2rem;
        
@@ -735,7 +737,7 @@ img:hover {
 
     .leftSide > .mainWeather >.Temperature {
         font-size: 1.5rem;
-        font-weight: lighter;
+        font-weight: normal;
         height: 50px;
         padding: 20px;
         flex-direction: row;
@@ -761,7 +763,7 @@ img:hover {
    }
    .rightSide h1{
        font-size: 1.5rem;
-       font-weight: lighter;
+       font-weight: normal;
        margin: 10px;
        border-radius: 15px;
        padding: 2rem;
@@ -780,6 +782,30 @@ img:hover {
 
    
 
+}
+
+@media (max-width: 280px) {
+    ::-webkit-scrollbar {
+        display: none   ;
+    }
+
+    .navBar{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+
+    .inputSearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 290px;
+    
+    }
 }
 
 
