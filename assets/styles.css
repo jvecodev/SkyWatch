@@ -700,13 +700,28 @@ img:hover {
         margin: 10px;
     }
 
-    .navBar > .inputSearch {
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
 
+    .inputSearch input {
+        background-color: rgba(46, 45, 45, 0.233);
+        color: white;
+        border: none;
+        outline: none;
+        margin: 5px;
+    }
+    
+    .inputSearch input::placeholder {
+        color: white;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    
+    .inputSearch button {
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        background-color: rgba(46, 45, 45, 0.534);
     }
 
     .navBar > .currentLoc > button {
