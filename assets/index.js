@@ -50,6 +50,7 @@ currentLoc.addEventListener('click', (e) => {
 
 const date = new Date();
 
+//              O parametro se espera ser um numero inteiro entre 0 e 11
 function getNomeMes(mes) {
     const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
     return meses[mes];
@@ -61,10 +62,10 @@ function getNomeDia(dia) {
 }
 
 function createDate() {
-    const dia = getNomeDia(date.getDay());
-    const mes = getNomeMes(date.getMonth());
-    const diaMes = date.getDate();
-    const ano = date.getFullYear();
+    const dia = getNomeDia(date.getDay()); //obtem o dia da semana em numero, e parte para o array e tranforma em string
+    const mes = getNomeMes(date.getMonth()); //obtem o mes em numero, e parte para o array e tranforma em string
+    const diaMes = date.getDate(); // obtem o dia do mes em numero inteiro
+    const ano = date.getFullYear(); // obtem o ano em numero inteiro
 
     h4Date.innerHTML = `${dia}, ${diaMes} de ${mes} de ${ano}`;
 
@@ -82,7 +83,6 @@ function createDate() {
 
     getNextDays();
 }
-
 
 
 createDate();
